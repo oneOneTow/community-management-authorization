@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="community-management-authorization" target="1.5" />
+      <module name="community-management-authorization" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
