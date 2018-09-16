@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="vens.ai.graduate.design.authorization.mapper.UserMapper">
+    <resultMap id="UserMap" type="vens.ai.graduate.design.authorization.entity.User">
+        <id column="id" property="id"/>
+        <result column="u_name" property="userName"/>
+        <result column="student_id" property="studentId"/>
+        <result column="student_name" property="studentName"/>
+        <result column="password" property="password"/>
+        <result column="picture" property="picture"/>
+    </resultMap>
+    <insert id="save" parameterType="vens.ai.graduate.design.authorization.entity.User">
+        insert into user(u_name,student_id,student_name,email,password,picture) values(#{userName,jdbcType=VARCHAR},
+        #{studentId,jdbcType=VARCHAR},
+        #{studentName,jdbcType=VARCHAR},
+        #{email,jdbcType=VARCHAR},
+        #{password,jdbcType=VARCHAR},
+        #{picture,jdbcType=BLOB})
+    </insert>
+    <select id="findByStuId" resultMap="UserMap">
+        select * from user where student_id=#{stuId}
+    </select>
+    <select id="findByName" resultMap="UserMap">
+        select * from user where u_name=#{name}
+    </select>
+</mapper>
