@@ -8,11 +8,9 @@ import vens.ai.graduate.design.authorization.controller.response.LoginResponse;
 import vens.ai.graduate.design.authorization.controller.response.RegisterResponse;
 import vens.ai.graduate.design.authorization.controller.request.LoginRequestVo;
 import vens.ai.graduate.design.authorization.exception.BaseException;
-import vens.ai.graduate.design.authorization.service.TestService;
 import vens.ai.graduate.design.authorization.service.serviceImpl.AuthorizationServiceImpl;
 import vens.ai.graduate.design.authorization.util.Base64Helper;
 
-import javax.imageio.stream.FileImageInputStream;
 import javax.imageio.stream.FileImageOutputStream;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
@@ -29,8 +27,7 @@ public class AuthorizationControllerImpl implements AuthorizationController{
 
     @Autowired
     AuthorizationServiceImpl authorizationService;
-    @Autowired
-    TestService testService;
+
 
     @Override
     public LoginResponse login(LoginRequestVo loginRequest) throws Exception{
@@ -79,11 +76,4 @@ public class AuthorizationControllerImpl implements AuthorizationController{
     }
 
 
-//    public Response options() {
-//            return Response.ok()
-//                    .header(CorsHeaderConstants.HEADER_AC_ALLOW_METHODS, "POST")
-//                    .header(CorsHeaderConstants.HEADER_AC_ALLOW_CREDENTIALS, "false")
-//                    .header(CorsHeaderConstants.HEADER_AC_ALLOW_ORIGIN, "*")
-//                    .build();
-//    }
 }
