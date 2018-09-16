@@ -1,28 +1,16 @@
-package vens.ai.graduate.design.authorization.entity;
-
-
-import java.util.Arrays;
+package vens.ai.graduate.design.authorization.controller.request;
 
 /**
  * @author vens
- * @date 2018-03-22 22:42
+ * @date 2018-04-19 21:47
  **/
-public class User {
-    private String userId;
+public class RegisterRequestVo {
     private String userName;
     private String studentId;
     private String studentName;
     private String email;
-    private  String password;
-    private byte[] picture;
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
+    private String picture;
+    private String password;
 
     public String getUserName() {
         return userName;
@@ -56,11 +44,11 @@ public class User {
         this.email = email;
     }
 
-    public byte[] getPicture() {
+    public String getPicture() {
         return picture;
     }
 
-    public void setPicture(byte[] picture) {
+    public void setPicture(String picture) {
         this.picture = picture;
     }
 
@@ -70,10 +58,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" + "userId='" + userId + '\'' + ", userName='" + userName + '\'' + ", studentId='" + studentId + '\'' + ", studentName='" + studentName + '\'' + ", email='" + email + '\'' + '}';
     }
 }

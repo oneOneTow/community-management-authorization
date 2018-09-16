@@ -21,37 +21,25 @@ public class FaceRecognitionGateway{
     String appId;
     String apiKey;
     String secretKey;
+    private AipFace getAvailableAipFace(){
+        return new AipFace(appId,apiKey,secretKey);
+    }
+    public JSONObject faceMatch(byte[][] images){
+        HashMap<String,String> options=new HashMap<>(16);
+        options.put("ext_fields", "qualities");
+        options.put("image_liveness", ",faceliveness");
+        options.put("types", "7,13");
+        return this.getAvailableAipFace().match(images,options);
+    }
 
     public void setAppId(String appId) {
         this.appId = appId;
     }
-
     public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
     }
 
     public void setSecretKey(String secretKey) {
         this.secretKey = secretKey;
-    }
-
-    private AipFace getAvailableAipFace(){
-        return new AipFace(appId,apiKey,secretKey);
-    }
-    public JSONObject faceMatch(String sourceFace,String targetFace){
-        HashMap<String,String> options=new HashMap<>(16);
-        options.put("ext_fields", "qualities");
-        options.put("image_liveness", ",faceliveness");
-        options.put("types", "7,13");
-        ArrayList<String> images=new ArrayList<>();
-        images.add(sourceFace);
-        images.add(targetFace);
-        return this.getAvailableAipFace().match(images,options);
-    }
-    public JSONObject identifyUser(String groupId,String image){
-        HashMap<String, String> options = new HashMap<>(16);
-        options.put("ext_fields", "faceliveness");
-        options.put("user_top_num", "3");
-        //String groupId ="one";
-        return this.getAvailableAipFace().identifyUser(groupId, image, options);
     }
 }
