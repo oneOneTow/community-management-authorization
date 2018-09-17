@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import javax.sql.DataSource;
@@ -14,6 +15,7 @@ import javax.sql.DataSource;
  * @author vens
  * @date 2018-05-01 16:02
  **/
+@EnableDiscoveryClient
 @SpringBootApplication
 @MapperScan(basePackages = "vens.ai.graduate.design.authorization.mapper")
 public class AuthorizationApplication {

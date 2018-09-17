@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/community-management-authorization.iml" filepath="$PROJECT_DIR$/community-management-authorization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../community-management-notifaction/community-management-notifaction.iml" filepath="$PROJECT_DIR$/../community-management-notifaction/community-management-notifaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../community-management-numbers/community-management-numbers.iml" filepath="$PROJECT_DIR$/../community-management-numbers/community-management-numbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../micoservice_discovery_eureka/micoservice_discovery_eureka.iml" filepath="$PROJECT_DIR$/../micoservice_discovery_eureka/micoservice_discovery_eureka.iml" />
     </modules>
   </component>
 </project>

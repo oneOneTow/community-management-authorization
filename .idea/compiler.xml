@@ -7,10 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="community-management-authorization" />
+        <module name="community-management-notifaction" />
+        <module name="community-management-numbers" />
+        <module name="micoservice_discovery_eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="community-management-authorization" target="1.8" />
+      <module name="community-management-notifaction" target="1.8" />
+      <module name="community-management-numbers" target="1.8" />
+      <module name="micoservice_discovery_eureka" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../community-management-numbers/pom.xml" />
+        <option value="$PROJECT_DIR$/../community-management-notifaction/pom.xml" />
+        <option value="$PROJECT_DIR$/../micoservice_discovery_eureka/pom.xml" />
       </list>
     </option>
   </component>
