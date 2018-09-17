@@ -44,14 +44,6 @@ public interface AuthorizationController {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     RegisterResponse freshToken()throws Exception;
-    //RegisterResponse freshToken(@RequestHeader("auth_token")String token)throws Exception;
 
-    /**
-     * This method will do a preflight check itself
-     * @return
-     */
-//    @OPTIONS
-//    @Path("/test")
-//    @LocalPreflight
-//    Response options();
+    boolean checkToken(String token);
 }

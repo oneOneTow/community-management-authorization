@@ -61,5 +61,11 @@ public class AuthorizationControllerImpl implements AuthorizationController{
         return response;
     }
 
+    @Override
+    public boolean checkToken(String token) {
+
+        return false;
+    }
+
 
 }
