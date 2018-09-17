@@ -3,7 +3,6 @@ package vens.ai.graduate.design.authorization.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import vens.ai.graduate.design.authorization.controller.request.RegisterRequestVo;
-import vens.ai.graduate.design.authorization.controller.request.TestRequest;
 import vens.ai.graduate.design.authorization.controller.response.LoginResponse;
 import vens.ai.graduate.design.authorization.controller.response.RegisterResponse;
 import vens.ai.graduate.design.authorization.controller.request.LoginRequestVo;
@@ -54,19 +53,6 @@ public class AuthorizationControllerImpl implements AuthorizationController{
         return response;
     }
 
-    @Override
-    public RegisterResponse test(TestRequest request) throws Exception {
-        System.out.println("data:"+request.getData());
-        String data=request.getData().replace("data:image/png;base64,","");
-        String img= Base64Helper.decde(data);
-        File file=new File("E:\\touxiang.png");
-        FileImageOutputStream fis=new FileImageOutputStream(file);
-        fis.write(img.getBytes(),0,img.getBytes().length);
-        fis.close();
-        RegisterResponse response=new RegisterResponse();
-        response.setCode("success");
-        return response;
-    }
 
     @Override
     public RegisterResponse freshToken() throws Exception {

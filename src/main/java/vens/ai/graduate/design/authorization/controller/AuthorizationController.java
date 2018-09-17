@@ -1,18 +1,11 @@
 package vens.ai.graduate.design.authorization.controller;
-
-import org.apache.cxf.rs.security.cors.CrossOriginResourceSharing;
-import org.apache.cxf.rs.security.cors.LocalPreflight;
-import org.springframework.web.bind.annotation.RequestHeader;
 import vens.ai.graduate.design.authorization.controller.request.RegisterRequestVo;
-import vens.ai.graduate.design.authorization.controller.request.TestRequest;
 import vens.ai.graduate.design.authorization.controller.response.LoginResponse;
 import vens.ai.graduate.design.authorization.controller.response.RegisterResponse;
 import vens.ai.graduate.design.authorization.controller.request.LoginRequestVo;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-
 /**
  * @author vens
  * @date 2018-03-22 22:43
@@ -39,12 +32,6 @@ public interface AuthorizationController {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     RegisterResponse register(RegisterRequestVo registerRequest)throws Exception;
-
-    @Path("/upload")
-    @POST
-    @Produces({MediaType.APPLICATION_JSON})
-    @Consumes({MediaType.APPLICATION_JSON})
-    RegisterResponse test(TestRequest request)throws Exception;
 
     /**
      * 刷新token

@@ -1,6 +1,6 @@
 spring:
   application:
-    admin: authorization
+    name: authorization
   datasource:
         url: jdbc:mysql://localhost:3306/gradu-desgin
         username: root
@@ -40,10 +40,4 @@ c3p0:
   driver-class: com.mysql.jdbc.Driver
 secourity:
   privateKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALazmK7Anx81ayMQouIGVY8yt/dO0cdGCcSbUHHd8Rci\\nIgrOeLq2xjpQGP6NpZ9TRwGBZkTu1Sw8HIwjU5LnaK8CAwEAAQ==
-## 通过配置设置c3p0数据源
-#spring.datasource.type=com.mchange.v2.c3p0.ComboPooledDataSource
-#spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-#spring.datasource.url=jdbc:mysql://localhost:3306/gradu-desgin
-#spring.datasource.username=root
-#spring.datasource.password=1234
-#
+
